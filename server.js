@@ -1,12 +1,11 @@
 const express = require('express')
 const routes = require("./routes")
-
 //template engine
 const nunjucks = require('nunjucks')
 
 const server = express()
 
-
+server.use(express.urlencoded({extented:true}))
 server.use(express.static('public'))
 server.use(routes)
 //trazendo o html pra o nunjucks
