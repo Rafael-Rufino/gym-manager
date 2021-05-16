@@ -19,6 +19,10 @@ routes.get('/instructors/create', function (req, res) {
 
 routes.get('/instructors/:id', instructors.show)
 
+//editar
+routes.get('/instructors/:id/edit', instructors.edit)
+
+
 
 /*Pegando os dados do formulario*/
 routes.post('/instructors', instructors.post)
