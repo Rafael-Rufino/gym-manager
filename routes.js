@@ -27,10 +27,14 @@ routes.get('/instructors/:id/edit', instructors.edit)
 /*Pegando os dados do formulario*/
 routes.post('/instructors', instructors.post)
 
+// atualizar 
+routes.put('/instructors', instructors.put)
 
+// delete
+routes.delete('/instructors', instructors.delete)
 
 routes.get('/members', function (req, res) {
-    return res.send("about")
+    return res.send("members")
 
 })
 

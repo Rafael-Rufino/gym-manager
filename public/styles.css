@@ -211,5 +211,16 @@ a.btnEditar{
     transition: 700ms;
 }
 a.btnEditar:hover{
-    filter:brightness(90%);
+    filter:brightness(85%);
+}
+
+#form-delete button[type="submit"]{
+    background-color: rgb(192, 48, 48);
+    transition: 700ms;
+    margin-top: 8px;
+
+}
+
+#form-delete:hover{
+    filter:brightness(85%)
 }
