@@ -1,49 +1,33 @@
 {% extends "layout.njk" %}
 
-
 {% block content %}
+    <div class="card table-container">
+    <table width="100%">
+        <thead>
+            <tr>
+                <th>Instructors</th>
+                <th>Atendimento</th>
+                 <th>Ação</th>
+            </tr>
+        </thead>
 
 
-<div class = "card">
- <section class = "avatar"></section>
+        <tbody>
+            {% for instructor in instructors %}
 
-     
+            <tr>
+                <td>
+                    <span  style="background-image: url({{instructor.avatar_url}})"></span>
+                    {{instructor.name}}
+                </td>
+                <td>{{instructor.services}}</td>
+                <td><a href="/instructors/{{instructor.id}}">Ver</a></td>
 
- <section class = "details">
-    <h3>Detalhes</h3>
+            </tr>
+            {% endfor %}
 
-    <div class="item">
-        <div>Instrutor</div>
-        <div>Rafael Rufino</div>
+
+        </tbody>
+    </table>
     </div>
-
-    <div class="item">
-        <div>Idade</div>
-        <div>29</div>
-    </div>
-
-     <div class="item">
-        <div>Sexo</div>
-        <div>Masculino</div>
-    </div>
-
-     <div class="item">
-        <div>Acompanhamento</div>
-        <div>
-        <span>Musculação</span>
-        <span>Crossfit</span>
-        </div>
-    </div>
-
-    <div class="item">
-        <div>Desde</div>
-        <div>01/01/2020</div>
-    
-    </div>
-
- </section>
- 
-</div>
-
-
 {% endblock content %}

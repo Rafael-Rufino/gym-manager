@@ -100,10 +100,10 @@ header{
 }
 
 /*==== Avatar ===*/
-.card .avatar{
+/* .card .avatar{
     background: url(https://source.unsplash.com/collection/3621148/500x500 )center center / cover no-repeat;
 
-}
+} */
 
 /* ===  Details ==*/
 .details{
@@ -223,4 +223,79 @@ a.btnEditar:hover{
 
 #form-delete:hover{
     filter:brightness(85%)
+}
+
+
+/*INDEX INSTRUCTORS*/
+
+.table-container{
+    display:block;
+    padding: 40px;
+    box-sizing: border-box;
+
+}
+
+.table-container tablet{
+    border-spacing: 0;
+}
+.table-container thead tr th{
+    text-align:left;
+}
+
+td, th{
+    padding: 16px;
+    border-bottom: 1px solid #d9d9d9;
+    font-weight: bold;
+}
+
+th{
+    text-transform: uppercase;
+    color: #777;
+    font-size: 14px;
+    
+}
+
+tbody tr:last-child td{
+    border-bottom: none;
+
+}
+tbody tr td:first-child{
+    display:grid;
+    grid-template-columns: 80px 1fr;
+    align-items:center;
+
+
+}
+
+tbody tr td:first-child span{
+    width:60px;
+    height:60px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px black;
+    border: 2px solid  var(--primary-color);
+}
+
+tbody tr td:last-child a{
+    background-color: var(--primary-color);
+    padding: 8px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    border-radius:4px;
+    font-weight: normal;
+    transition: 700ms;
+
+}
+
+tbody tr td:last-child a:hover{
+    filter: brightness(86%);
+}
+
+
+.table-container thead tr th:last-child,
+td:last-child{
+    text-align: center;
 }
