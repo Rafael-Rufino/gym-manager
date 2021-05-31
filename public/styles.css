@@ -159,7 +159,7 @@ header{
 }
 
 /*===FORM====*/
-input{
+input, select{
     width: 100%;
     outline: none;
     color:#555;
@@ -226,7 +226,7 @@ a.btnEditar:hover{
 }
 
 
-/*INDEX INSTRUCTORS*/
+/*Tabela*/
 
 .table-container{
     display:block;
@@ -277,7 +277,8 @@ tbody tr td:first-child span{
     border: 2px solid  var(--primary-color);
 }
 
-tbody tr td:last-child a{
+tbody tr td:last-child a,
+.table-container > a{
     background-color: var(--primary-color);
     padding: 8px 16px;
     text-decoration: none;
@@ -287,6 +288,11 @@ tbody tr td:last-child a{
     border-radius:4px;
     font-weight: normal;
     transition: 700ms;
+
+}
+.table-container > a{
+    margin-bottom: 18px;
+    display: inline-block;
 
 }
 
@@ -299,3 +305,5 @@ tbody tr td:last-child a:hover{
 td:last-child{
     text-align: center;
 }
+
+

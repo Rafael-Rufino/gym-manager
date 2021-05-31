@@ -3,8 +3,10 @@
 {% block content %}
 
   <div class="card">
-    <section class="avatar"></section>
-
+    <section
+          class="avatar" 
+           style="background: url({{member.avatar_url}})no-repeat center center / cover">
+     </section>
     <section class="details">
       <form method="POST" action="/instructors?_method=PUT">
         <h3>Editar Instrutor</h3>
@@ -18,8 +20,20 @@
         <input type="hidden" name="id" value="{{instructor.id}}">
         <button type="submit">Deletar</button>
       </form>
+
     </section>
 
   </div>
+  <script>
+    const formDelete = document.querySelector("#form-delete");
+    formDelete.addEventListener("submit", function (event) {
+      const confirmation = confirm("Deseja deletar?")
+
+      if (!confirmation) {
+        event.preventDefault()
+      }
+
+    })
+  </script>
 
 {% endblock content %}

@@ -1,13 +1,13 @@
 const fs = require('fs')
-const data = require("./data.json")
-const { age, date } = require('./utils')
+const data = require("../data.json")
+const { age, date } = require('../utils')
+
+
 
 //instructors
 exports.index =  function (req, res) {
     return res.render("instructors/index", { instructors:data.instructors})
 }
-
-
 
 // show
 exports.show = function (req, res) {
@@ -32,7 +32,11 @@ exports.show = function (req, res) {
     return res.render("instructors/show", { instructor })
 }
 
-// create
+//create
+exports.create = function (req, res) {
+    return res.render("instructors/create")
+} 
+// post
 exports.post = function (req, res) {
     const keys = Object.keys(req.body)
     // validação
@@ -78,16 +82,12 @@ exports.edit = function (req, res) {
         return id == instructor.id
     })
 
-
     if (!foundInstructor) return res.send("Instructor not found!")
-
 
     const instructor = {
         ...foundInstructor,
-        birth: date(foundInstructor.birth)
+        birth: date(foundInstructor.birth).iso
     }
-
-
 
     return res.render('instructors/edit', { instructor});
 }
